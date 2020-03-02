@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<!----Web Fonts---->
+		<link href="https://fonts.googleapis.com/css?family=Grand+Hotel&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
+		<!----Web Fonts---->
+		<title>Hot Sauce Story</title>
+		<!----Start of jQuery code---->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+		
+		<style>
+  			.draggable {}
+			.toggler { width: 10px; height: auto; position: center; }
+    		#button { padding: .5em 1em; text-decoration: none; }
+   			#effect { width: 900px; height: 50px; padding: 0.4em; position: relative; background: #ECB000; }
+  		</style>
+		
+  			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+  				<script>
+  					$( function() {
+    					$( ".draggable" ).draggable();
+  					} );
+				</script>
+		
+				<script>
+  					$( function() {
+						var state = true;
+    					$( "#button" ).on( "click", function() {
+							if ( state ) {
+						$( "#effect" ).animate({
+          					backgroundColor: "#aa0000",
+          					color: "#ECB000",
+							width: 500
+        				}, 1000 );
+					} else {
+        			$( "#effect" ).animate({
+							backgroundColor: "#ECB000",
+							color: "#000",
+							width: 240
+						}, 1000 );
+     				 }
+					state = !state;
+					});
+  				} );
+				</script>
+		
+				<script>
+  					$( function() {
+    					$( "input" ).checkboxradio();
+  					} );
+				</script>
+		<!----End of jQuery code---->
+	</head>
+	
+	<div id="container">
+	<body>
+		<header>
+			<h1>The Hot Sauce Experience</h1>
+		</header>
+		<!--Color button animator And Selector-->
+		<nav>
+			<div class="toggler">
+  			<div id="effect" class="ui-widget-content ui-corner-all">
+				<button id="button" class="ui-state-default ui-corner-all"><a href="https://heatonist.com/collections/hot-sauce-gift-packs/products/hot-ones-season-9-warmup-pack?variant=20394890526818l">Sauce Pack</a></button>
+			</div>
+			</div>
+			<h2>Scoville Scale</h2>
+  				<fieldset>
+   					<legend>Select Your Pepper</legend>
+    					<label for="radio-1">0 to 100: Bell Pepper</label>
+    						<input type="radio" name="radio-1" id="radio-1">
+    					<label for="radio-2">100,000 to 350,000: Habanero</label>
+    						<input type="radio" name="radio-1" id="radio-2">
+    					<label for="radio-3">800,000 to 3,200,000: Carolina Reaper</label>
+   							 <input type="radio" name="radio-1" id="radio-3">
+  				</fieldset>
+		</nav>
+		<!--Color button animator And Selector-->
+		<section class="left">
+				<h2>Why I Love Hot Sauce</h2>
+					<p>Hot sauce is one of the human's greatest inventions. For me a hot sauce must be well balanced with great flavors and the right amount of heat. Currently I’m really into <a href="https://www.humblehousefoods.com/online-store/Ancho-%26-Morita-Hot-Sauce-p57990964">Humble House’s</a> Ancho And Morita Hot Sauce. This sauce maker is straight from San Antonio, Texas. The Ancho And Morita hot sauce has an umami flavor that is packed with bold ancho and morita chilly notes. The sauce is aged for 30 days so the heat mellows, while other flavors mature. I love putting this hot sauce on pizza, but the makers recommend putting it on pork and ribs.</p>
+			<!--Draggable image-->
+					<div class="draggable" class="ui-widget-content">
+						<div class="image"> <img src="images/humblehouse.jpg" alt="Humble House Hot Sauce"></div>
+					</div>
+			<!--Draggable image-->
+			
+		</section>
+			
+		<section class="right">
+				<h2>The Hottest Hot Sauce I have Tasted...</h2>
+					<p>After making a trip to Fredericksburg, Texas, for some German food, I stumbled upon a small shop called <a href="https://www.rustlinrobs.com/">Rustlin Rob’s Texas Gourmet Foods.</a> I noticed an area that was behind the counter. A customer stood in the middle crying as he held a small cracker with a dot of what seemed to be hot sauce. Inspired by one of my favorite shows on Youtube: HotOnes, I started to look at the lineup of hot sauces leading up to "Da Bomb". I decided to embark on the challenge. I shook a small drop of sauce onto a final cracker and with my shaky hand I started to chew. I could feel my adrenaline and ears ring as nothing happened. The heat started to take over my thoughts as my taste buds ignited. It came in waves and I started to pace around the shop looking for something to eat. Two hours later and 4 beers in, I finally saw the light. Da Bomb was by far the hottest sauce I have tasted....</p>
+			<!--Draggable image-->
+					<div class="draggable" class="ui-widget-content">
+						<div class="image"> <img src="images/dabomb.jpg" alt="Da Bomb Hot Sauce"></div>
+					</div>
+			<!--Draggable image-->
+		</section>
+		
+		<footer>Revised 2/29/2020: Reposted By Cesar M.</footer>
+	</body>
+	</div>
+</html>
